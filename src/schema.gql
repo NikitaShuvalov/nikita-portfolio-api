@@ -1,0 +1,44 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Experience {
+  achievements: String!
+  company: String!
+  endDate: String
+  id: Int!
+  position: String!
+  startDate: String!
+}
+
+type Profile {
+  description: String!
+  experience: [Experience!]
+  github: String
+  id: Int!
+  name: String!
+  projects: [Project!]
+  skills: [Skill!]
+}
+
+type Project {
+  description: String
+  id: Int!
+  name: String!
+  url: String
+}
+
+type Query {
+  experience: [Experience!]!
+
+  """Get the full profile with nested data"""
+  profile: Profile!
+  projects: [Project!]!
+  skills: [Skill!]!
+}
+
+type Skill {
+  id: Int!
+  level: String
+  name: String!
+}
